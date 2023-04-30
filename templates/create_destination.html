@@ -1,0 +1,27 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ destination_form.as_p }}
+    {{ image_formset.management_form }}
+    {% for image_form in image_formset %}
+        {{ image_form.as_p }}
+    {% endfor %}
+    <div class="form-group">
+        <input type="file" name="img">
+        <input type="button" value="Add Image" id="add-image">
+    </div>
+    <button type="submit">Save</button>
+</form>
+
+<script>
+document.querySelector('#add-image').addEventListener('click', function() {
+    const formCount = document.querySelectorAll('.image-form').length;
+    const newForm = document.querySelector('.image-form:last-of-type').cloneNode(true);
+    const input = newForm.querySelector('input');
+    input.name = input.name.replace(`-${formCount - 1}-`, `-${formCount}-`);
+    input.value = '';
+    document.querySelector('.image-formset').appendChild(newForm);
+});
+</script>
+```
+
+In the template, we've added a new `input` field for adding more images. We've also added a [JavaScript function](poe://www.poe.com/_api/key_phrase?phrase=JavaScript%20function&prompt=Tell%20me%20more%20about%20JavaScript%20function.) that clones the last `ImageForm` in the formset and updates the `name` attribute of its `input` field to ensure that it's unique. The new `ImageForm` is then appended to the formset.

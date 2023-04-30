@@ -1,0 +1,567 @@
+{% load static %}
+{% static "images" as imgsUrl %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ay-moon</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet"> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!--TOP-->
+
+
+<div class="container-fluid">
+  <div class="row bg-warning py-2 px-xl-5">
+
+      <div class="col-lg-6 text-center text-lg-right">
+          <div class="d-inline-flex align-items-center">
+              <a class="text-dark px-2" href="">
+                  <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="text-dark px-2" href="">
+                  <i class="fab fa-twitter"></i>
+              </a>
+              <a class="text-dark px-2" href="">
+                  <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a class="text-dark px-2" href="">
+                  <i class="fab fa-instagram"></i>
+              </a>
+              <a class="text-dark pl-2" href="">
+                  <i class="fab fa-youtube"></i>
+              </a>
+          </div>
+      </div>
+  </div>
+
+
+
+<!--nav-->
+
+
+
+
+
+<!--1st-->
+<div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg bg-light navbar-light py-6 py-lg-0 px-3">
+              <a href="" class="text-decoration-none d-block d-lg-none">
+                  <h1 class="m-0 display-6 font-weight-bold"><span class="text-primary font-weight-bold border px-3 mr-1">Ay-</span>moon</h1>
+              </a>
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="#" class="nav-item nav-link active p-3">
+                      <span style="font-family: 'Pacifico', cursive; font-size: 30px;">Ay-moon</span>
+                    </a>
+
+
+                    <a href="?category=original" class="nav-item nav-link active p-4" style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: #006400; /* dark green */" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#333'">
+                      <b>Original</b> </a>
+                      <a href="?category=Mirror" class="nav-item nav-link active p-4" style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: #006400; /* red */" onmouseover="this.style.color='#f8b195'" onmouseout="this.style.color='#333'">
+                      <span><b>Mirror</b> </span>
+                      </a>
+                      <a href="?category=Egyptian" class="nav-item nav-link active p-4" style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: #006400; /* blue */" onmouseover="this.style.color='#f8b195'" onmouseout="this.style.color='#333'">
+                      <span><b>Egyptian</b> </span>
+                      </a>
+                      <a href="?category=SHIRTS" class="nav-item nav-link active p-4" style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: #006400; /* blue */" onmouseover="this.style.color='#f8b195'" onmouseout="this.style.color='#333'">
+                      <span><b>SHIRTS</b> </span>
+                      </a>
+                      <a href="?category=JACKETS" class="nav-item nav-link active p-4" style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: #006400; /* blue */" onmouseover="this.style.color='#f8b195'" onmouseout="this.style.color='#333'">
+                        <span><b>JACKETS</b> </span>
+                        </a>
+                      <a href="?category=Other" class="nav-item nav-link active p-4" style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: #006400; /* blue */" onmouseover="this.style.color='#f8b195'" onmouseout="this.style.color='#333'">
+                        <span><b>Other Pr.</b> </span>
+                      </a> 
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instructionsModal">Instructions</button>
+                      <div class="modal fade" id="instructionsModal" tabindex="-10" role="dialog" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                      <h4 class="modal-title" id="instructionsModalLabel">Instructions</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      </div>
+                      <div class="modal-body">
+                      <h2><b>Some instructions.</b></h2>
+                      <p>>> We will mail you and send a receipt of the amount paid.</p>
+                      <p>>> You can pay during Receiving the product but when you find "pay later".</p>
+                      <p>>> You can pay only 10% and the rest during Receiving the product but when you find "pay 10%".</p>
+
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Start Conversation</button> 
+                      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+                      <div class="modal-dialog"> 
+                      <div class="modal-content"> 
+                      <div class="modal-header"> 
+                      <h4 class="modal-title" id="myModalLabel">Conversation with Admin</h4> 
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                      </div> 
+                      <div class="modal-body"> 
+                      <!-- Insert conversation form here --> 
+                      <form action="#" method="post"> 
+                      <div class="form-group"> 
+                      <label for="message">Message:</label> 
+                      <textarea class="form-control" id="message" name="message" rows="5"></textarea> 
+                      </div> 
+                      </form> 
+                      </div> 
+                      <div class="modal-footer"> 
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                      <button type="submit" class="btn btn-primary">Send</button> 
+                      </div> 
+                      </div>
+                      </div>
+                      </div>
+                  </div>
+          </nav>
+          <div id="header-carousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                  <div class="carousel-item active" style="height: 600px;">
+                      <img class="img-fluid" src="{% static 'images/mio.webp' %}" alt="Image">
+                      <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                          
+                      </div>
+                  </div>
+                  <div class="carousel-item" style="height: 600px;">
+                      <img class="img-fluid" src="{% static 'images/mioo.webp' %}" alt="Image">
+                      <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                          
+                      </div>
+                  </div>
+              </div>
+              <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                  <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                      <span class="carousel-control-prev-icon mb-n2"></span>
+                  </div>
+              </a>
+              <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                  <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                      <span class="carousel-control-next-icon mb-n2"></span>
+                  </div>
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<!-- </div>
+      </div>
+      <div class="col-lg-2"></div>
+
+         <div class="list-group">
+          <a data-toggle="collapse" href="#xc" class="list-group-item list-group-item-action bg-warning" aria-current="true">
+              F60 OFFERS
+          </a>
+
+          <div class="collapse show" id="xc">
+
+          <a href="#" class="list-group-item list-group-item-action">Yeezy 700 'mirror'</a>
+          <a href="#" class="list-group-item list-group-item-action">Ballmain with box</a>
+          <a href="#" class="list-group-item list-group-item-action">Breshka</a>
+          <a class="list-group-item list-group-item-action disabled">Air Force</a>
+          </div>     
+
+          </div>
+
+
+  </div>
+
+
+</div> -->
+
+            <!-- Subscribe Start -->
+
+            <div class="row justify-content-md-center py-1 px-xl-1">
+              <div class="col-md-6 col-12 py-3">
+                <div class="text-center mb-2 pb-2" style="background-color: white; overflow: hidden;">
+                  <h3 class="section-title px-5 mb-3 move-left" style="background-color: rgb(236, 211, 211); color: rgb(56, 61, 129);"><span class="px-2">products</span></h3>
+                  <!-- <h3 class="section-title px-5 mb-3 move-left" style="background-color: white; color: rgb(56, 61, 129);"><span class="px-2">Egyptian products: only in Egypt</span></h3>  
+                  <h3 class="section-title px-5 mb-3 move-left" style="background-color: white; color: rgb(56, 61, 129);"><span class="px-2">Original and Mirror products: Anywhere</span></h3> 
+                  -->
+                </div>
+                <style>
+                  .move-left:nth-child(1) {
+                    animation-delay: 5s;
+                  }
+            
+                  .move-left:nth-child(2) {
+                    animation-delay: 4s;
+                  }
+            
+                  .move-left:nth-child(3) {
+                    animation-delay: 8s;
+                  }
+            
+                  .move-left {
+                    animation: moveLeft 25s linear infinite;
+                  }
+            
+                  @keyframes moveLeft {
+                    100% {
+                      opacity: 1;
+                      transform: translateX(0%);
+                    }
+                    100% {
+                      opacity: 0;
+                      transform: translateX(-100%);
+                    }
+                    100% {
+                      opacity: 1;
+                      transform: translateX(0%);
+                    }
+                  }
+                </style>
+              </div>
+            </div>
+            </div>
+  <!-- Subscribe End -->
+
+
+
+           
+
+     <!--card-->
+            
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <style>
+            .card-img-top {
+                transition: transform 0.3s ease-out;
+            }
+            .enlarged {
+                transform: scale(1.5);
+            }
+
+            .card-text .remaining-words {
+                display: none;
+              }
+            
+              .card-text .show {
+                display: inline;
+              }
+            
+              .card-text .first-two-words {
+                font-weight: bold;
+              }
+
+
+        </style>
+        {% for des in dest %}   
+        <div class="col-lg-2 p-4 col-md-4 col-6">
+            <div class="card">
+              <img src="{{des.img.url}}" class="card-img-top" alt="{{des.name}}" id="img-{{des.id}}">
+              {% if des.special %}
+              <p class="tooltip-text" style="background-color: rgb(255, 255, 255); color: rgb(34, 31, 31); font-weight: bold; position: absolute; right: 10px; top: 10px;">Pay 10% Now</p>
+              <style>
+              .tooltip-text {
+              position: relative;
+              }
+              .tooltip-text:hover::after {
+              content: "Pay the rest upon receipt";
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 150px;
+              background: #fff;
+              border-radius: 5px;
+              padding: 5px;
+              box-shadow: 1px 1px 1px #999;
+              z-index: 1;
+              transition: opacity 0.3s ease-in-out;
+              }
+              </style>
+              {% endif %}
+
+              {% if des.later %}
+              <p class="tooltipoo-text" style="background-color: rgb(255, 255, 255); color: rgb(34, 31, 31); font-weight: bold; position: absolute; right: 10px; top: 10px;">Pay later</p>
+              <style>
+              .tooltipoo-text {
+              position: relative;
+              }
+              .tooltipoo-text:hover::after {
+              content: "Pay the rest upon receipt";
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 150px;
+              background: #fff;
+              border-radius: 5px;
+              padding: 5px;
+              box-shadow: 1px 1px 1px #999;
+              z-index: 1;
+              transition: opacity 0.3s ease-in-out;
+              }
+              </style>
+              {% endif %}
+
+              {% if des.later %}
+              <a href="form.html" class="btn btn-success btn-sm {% if des.later %} active {% endif %}">PAY LATER</a>
+              {% endif %}                
+                <div class="card-body">
+
+                  
+
+                    <h5 class="card-title">
+                        <span>{{des.name}}</span>
+                        <i class="fas fa-copy" onclick="copyToClipboard('{{des.name}}');"></i>
+                      </h5>
+                      
+                      <style>
+                        .card-title span {
+                          display: inline-block;
+                          vertical-align: middle;
+                          /* Reduce font size if the product name is too long */
+                          font-size: 1.2rem;
+                          max-width: 75%;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                        
+                        .card-title i {
+                          display: inline-block;
+                          margin-left: 5px;
+                          cursor: pointer;
+                          vertical-align: middle;
+                        }
+                        
+                        /* Reduce font size further if the product name is still too long */
+                        @media screen and (max-width: 480px) {
+                          .card-title span {
+                            font-size: 1rem;
+                            max-width: 60%;
+                          }
+                        }
+                      </style>
+                      
+                      <script src="https://kit.fontawesome.com/your-key.js" crossorigin="anonymous"></script>
+                      <script>
+                      function copyToClipboard(text) {
+                        navigator.clipboard.writeText(text)
+                          .then(() => {
+                            alert('Text copied to clipboard');
+                          })
+                          .catch(() => {
+                            alert('Unable to copy text to clipboard');
+                          });
+                      }
+                      </script>
+                    {% if des.des == 'OR' %}
+    <p class="card-text" style="color: green; font-weight: bold;">{{ des.get_des_display }}</p>
+{% elif des.des == 'MI' %}
+    <p class="card-text" style="color: red; font-weight: bold;">{{ des.get_des_display }}</p>
+{% elif des.des == 'EG' %}
+    <p class="card-text" style="color: blue; font-weight: bold;">{{ des.get_des_display }}</p>
+{% elif des.des == 'SH' %}
+    <p class="card-text" style="color: rgb(255, 187, 0); font-weight: bold;">{{ des.get_des_display }}</p>
+{% elif des.des == 'JA' %}
+    <p class="card-text" style="color: rgb(255, 187, 0); font-weight: bold;">{{ des.get_des_display }}</p>    
+{% endif %}
+
+                    <div class="row col-lg-4 p-4 col-md-6 col-12">
+                        <p class="card-text">{{des.price}}$</p>
+                        <!-- <p class="card-text">{{des.pricee}}EGP</p> -->
+                    </div>
+                    <a href="index.html" class="btn btn-warning">BUY NOW</a>
+                    <script>
+                      function buyNow() {
+                        // Get product ID from button data-target
+                        var productID = this.dataset.target.split('#modal-')[1];
+                        
+                        // Find product details 
+                        var product = dest.find(p => p.id == productID);
+                        
+                        // Append product details to index.html
+                        document.querySelector('#index-details').innerHTML = `
+                          <img src="${product.img.url}" alt="${product.name}">
+                          <p>${product.description}</p>
+                        `;
+                        
+                        // Pre-populate form fields
+                        document.querySelector('input[name="product_name"]').value = product.name;
+                        document.querySelector('input[name="size"]').value = 'TODO';
+                        
+                        // Submit PayPal form
+                        document.getElementById("paypalForm").submit();
+                      }
+                      </script>
+                    <!-- existing code for card title, product description, and prices -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-{{des.id}}">More Details</button>
+                    <div class="modal fade" id="modal-{{des.id}}" tabindex="-1" role="dialog" aria-labelledby="modal-{{des.id}}-label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal-{{des.id}}-label">{{des.name}}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{des.img.url}}" class="img-fluid" alt="{{des.name}}">
+                                    <p>{{des.description}}</p>
+                                    {% if des.special_description %}
+                                        <hr>
+                                        <h6>Special Description:</h6>
+                                        <p>{{des.special_description}}</p>
+                                    {% endif %}
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="index.html" class="btn btn-primary">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+            <script>
+                // Get the image element and add a click event listener to it
+                var image = document.querySelector('#img-{{des.id}}');
+                var isEnlarged = false;
+                image.addEventListener('click', function() {
+                    // Toggle between the "enlarged" and "normal" states of the image
+                    if (isEnlarged) {
+                        this.classList.remove('enlarged');
+                        isEnlarged = false;
+                    } else {
+                        this.classList.add('enlarged');
+                        isEnlarged = true;
+                    }
+                });
+            </script>
+        </div>
+    {% endfor %}
+
+
+
+
+        
+    </div>
+</div>
+
+
+
+<div class="row">
+  {% for product in products %}
+  <div class="col-lg-4 col-md-6 col-12">
+    <div class="card">
+      <div class="card-header">{{ product.name }}</div>
+      <div class="card-body">
+        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text">{{ product.price }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+<script>
+  $(function() {
+    $(".row").draggable({
+      axis: "x",
+      containment: "parent"
+    });
+  });
+</script>
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary border-white text-dark mt-5 pt-5">
+
+      <div class="row border-top border-warning mx-xl-5 py-4">
+          <div class="col-md-6 px-xl-0">
+              <p class="mb-md-0 text-center text-md-left text-dark">
+                  &copy; <a class="text-dark font-weight-semi-bold" href="#">Your Site Name</a>. All Rights Reserved. Designed
+                  by
+                  <a class="text-dark font-weight-semi-bold" href="https://htmlcodex.com">Mohamed</a>
+              </p>
+          </div>
+          <div class="col-md-6 px-xl-0 text-center text-md-right">
+              <img class="img-fluid" src="img/payments.png" alt="">
+          </div>
+      </div>
+  </div>
+  <!-- Footer End -->
+
+  
+
+  
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+
+
+<!-- Google Translate Widget -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en', // set the page language
+    includedLanguages: 'ar,es,fr', // set the languages to include in the widget
+    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, // set the layout of the widget
+    autoDisplay: false, // disable automatic display of the widget
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+  
+
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

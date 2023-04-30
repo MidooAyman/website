@@ -1,0 +1,54 @@
+<!-- Google Translate Widget -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en', // set the page language
+    includedLanguages: 'ar,en,es,fr', // set the languages to include in the widget
+    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, // set the layout of the widget
+    autoDisplay: false, // disable automatic display of the widget
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Form and PayPal Button -->
+<form id="myForm" method="post">
+  {% csrf_token %}
+  <div id="index-details"></div>
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <input type="text" name="username" placeholder="Your Name" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);" required>
+    <input type="text" name="adress" placeholder="Adress" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+    <input type="text" name="phone" placeholder="Phone Number" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+    <label for="id_name">{{ form.name.label }}</label>
+    <input type="text" id="id_name" name="name" placeholder="Product name" value="{{ form.name.value }}" placeholder="{{ form.name.label }}" required>
+    <input type="text" name="size" placeholder="Size And Color" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+    <input type="button" value="Save and Pay" onclick="submitForm()" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); background-color: #ffc107; color: #fff; cursor: pointer;">
+  </div>
+</form>
+
+{% if not des.later %}
+
+<!-- PayPal Button -->
+
+<h2>
+  <div style="max-width: 300px; margin: 0 auto;">
+    <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="GLA8G5NMFFN58">
+      <button type="submit" style="display: none;"></button>
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
+</h2>
+
+<script>
+function submitForm() {
+  // Submit the form data
+  document.getElementById("myForm").submit();
+  
+  // Trigger the PayPal payment process
+  document.getElementById("paypalForm").submit();
+}
+</script>
+{% endif %}

@@ -1,0 +1,36 @@
+<!-- Google Translate Widget -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en', // set the page language
+    includedLanguages: 'ar,en,es,fr', // set the languages to include in the widget
+    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, // set the layout of the widget
+    autoDisplay: false, // disable automatic display of the widget
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Form and PayPal Button -->
+<form id="myForm" method="post">
+  {% csrf_token %}
+  <div id="index-details"></div>
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <input type="text" name="username" placeholder="Your Name" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);" required>
+    <input type="text" name="adress" placeholder="Adress" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+    <input type="text" name="phone" placeholder="Phone Number" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+    <input type="text" id="id_name" name="product_name" placeholder="Product name" value="{{ form.name.value }}" placeholder="{{ form.name.label }}" required>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+          var productName = document.getElementById("id_product_name").value;
+          if (productName == "") {
+            event.preventDefault();
+            alert("Please enter a product name.");
+          }
+        });
+      </script>
+    <input type="text" name="size" placeholder="Size And Color" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+    <br>
+    <input type="submit" value="Send" onclick="submitForm()" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); background-color: #ffc107; color: #fff; cursor: pointer;">
+</form>

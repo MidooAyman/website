@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="chat"> <div class="chat-header"> <p>Chat</p> </div> <div class="chat-container"> <div class="chat-messages"> <!-- Messages will be displayed here --> </div> </div> <div class="chat-input"> <input type="text" id="chat-message-input"> <button id="send-message-button">Send</button> </div> </div> <script> // Get conversation ID from URL let conversationId = window.location.pathname.split('/')[2]; // Get messages for conversation function getMessages() { fetch(`/api/conversations/${conversationId}/messages/`) .then(res => res.json()) .then(messages => { messages.forEach(message => { appendMessage(message); }); }); } function appendMessage(message) { let messageElement = document.createElement('p'); messageElement.textContent = message.sender.username + ': ' + message.body; document.querySelector('.chat-messages').appendChild(messageElement); } getMessages(); // Send message document.querySelector('#send-message-button').addEventListener('click', () => { sendMessage(); }); function sendMessage() { let messageInput = document.querySelector('#chat-message-input'); let messageText = messageInput.value; fetch(`/api/conversations/${conversationId}/messages/`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({body: messageText }) }) .then(res => res.json()) .then(message => { appendMessage(message); }); messageInput.value = ''; } </script>
+
+    
+</body>
+</html>
+
